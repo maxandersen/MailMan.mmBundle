@@ -1,0 +1,34 @@
+#/bin/bash
+
+PASSWORD=`security find-generic-password -s "${MM_IDENTIFIER}" -w 2>/dev/null`
+
+# If no password then ask for one
+if [ -z "${PASSWORD}" ]; then
+	PASSWORD=`"${MM_BUNDLE_SUPPORT}/bin/set_password"`
+fi
+
+# If password has been found then create the reply
+if [ -n "${PASSWORD}" ]; then
+
+cat << END
+{ actions = (
+		{
+			type = replyMessage;
+			body = "Approved: ${PASSWORD}";
+			subpart = "3.1";
+			headers = {
+				"#posting-style" = "top";
+				"#signature" = "";
+				"from" = "${MM_TO}";
+			};
+			resultActions = (
+				{
+					type = "openMessage";
+				}
+			);
+		},
+	);
+}
+END
+
+fi

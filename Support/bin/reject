@@ -1,0 +1,21 @@
+#/bin/bash
+
+cat << END
+{ actions = (
+		{
+			type = replyMessage;
+			subpart = "3.1";
+			headers = {
+				"#posting-style" = "top";
+				"#signature" = "";
+				"from" = "${MM_TO}";
+			};
+			resultActions = (
+				{
+					type = "openMessage";
+				}
+			);
+		},
+	);
+}
+END

@@ -1,0 +1,8 @@
+{
+	isDisabled    = 0;
+	name          = 'Show Subscribe Info';
+	uuid          = '20C4178E-9BC4-4F45-9549-8B9F6E9E30F0';
+	select	      = "List-Subscribe exists";
+	environment   = 'MM_LIST_INFO=${List-Subscribe}\n';
+	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/showinfo"\n';
+}

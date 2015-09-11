@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>zz-ohaqyrf@sereba.pbz</string>
+	<key>contactName</key>
+	<string>Benny Kjær Nielsen</string>
+	<key>description</key>
+	<string>Commands for the MailMan mailing list software</string>
+	<key>name</key>
+	<string>MailMan</string>
+	<key>uuid</key>
+	<string>5ED82AEE-926C-476F-A4D6-FA6E1E89F246</string>
+</dict>
+</plist>
