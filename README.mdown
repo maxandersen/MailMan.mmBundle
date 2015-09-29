@@ -1,24 +1,18 @@
-# MailMan MailMate Bundle - for working with mailman based mailing lists
+# Features
 
 This bundle groks the `List-*` headers used by MailMan based systems.
 
-Allows you to do the following actions:
+It allows you to do the following actions (in the “Commands ▸ MailMan” menu):
 
- * Set Password (used for reject/approve)
- * Reject or Approve a moderator mail
- * Show mailing list archive in browse (opens in browser)
- * Show Subscribe page (opens in browser)
- * Unsubscribe (opens in browser)
+* Set Password (used for reject/approve)
+* Reject or Approve a moderator mail
+* Show mailing list archive (opens in browser)
+* Show Subscribe page (opens in browser)
+* Unsubscribe (opens in browser)
 
 # Installation
 
-```
-mkdir -p ~/Library/Application Support/MailMate/Bundles
-cd ~/Library/Application Support/MailMate/Bundles
-git clone https://github.com/maxandersen/listMate.mmBundle
-```
-
-Then mailmate should have a `Commands > MailMan` menu where you can operate on the mailing list.
+You can install this bundle in MailMate by opening the preferences and going to the bundles tab. After installation it will be automatically updated for you.
 
 # Thanks
 
