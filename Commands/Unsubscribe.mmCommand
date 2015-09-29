@@ -1,8 +1,8 @@
 {
-	isDisabled    = 0;
 	name          = 'Unsubscribe';
 	uuid          = 'F1E5592F-377B-4F49-9F7F-F8A7C8E2F7BA';
-	select	      = "List-Unsubscribe exists";
+	select	      = "list-unsubscribe exists";
 	environment   = 'MM_LIST_INFO=${List-Unsubscribe}\n';
 	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/showinfo"\n';
+	keyEquivalent = '^m';
 }

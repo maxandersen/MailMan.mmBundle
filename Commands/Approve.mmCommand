@@ -1,7 +1,9 @@
 {
 	name          = 'Approve';
 	uuid          = 'F3D4B55F-2E86-4CAC-A0A5-18D172F017B7';
+	select	     = 'list-id exists';
 	environment   = 'MM_TO=${to}\nMM_NAME=${list-id.description}\nMM_IDENTIFIER=${list-id.identifier}\n';
 	output        = 'actions';
 	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/approve"\n';
+	keyEquivalent = '^m';
 }
