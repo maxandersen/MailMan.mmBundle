@@ -4,10 +4,11 @@ This bundle groks the `List-*` headers used by MailMan based systems.
 
 It allows you to do the following actions (in the “Commands ▸ MailMan” menu):
 
-* Set Password (used for reject/approve)
-* Reject or Approve a moderator mail
+* Reject or approve a moderator mail
+* Set password for approve replies
+* Set default action for reject/approve replies (open in composer or send email)
 * Show mailing list archive (opens in browser)
-* Show Subscribe page (opens in browser)
+* Show subscribe page (opens in browser)
 * Unsubscribe (opens in browser)
 
 # Installation
