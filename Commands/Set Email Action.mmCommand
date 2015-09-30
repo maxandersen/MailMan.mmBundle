@@ -1,0 +1,6 @@
+{
+	name          = 'Set Email Action';
+	uuid          = 'A8BD1D41-BED3-4545-9DAF-314274847CA3';
+	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/set_action"\n';
+	executionMode = 'noMessages';
+}
