@@ -4,9 +4,17 @@
 require "uri"
 uris = URI.extract(ENV['MM_LIST_INFO'])
 
-uris.each do |url|
-    if url.start_with?('http')
-       cmd = "open " + url
-       system(cmd)
-    end
+nothingfound = true
+
+uris.each do |url| url.start_with?("mailto:")
+  system("open " + url)
+  nothingfound = false
 end
+
+if nothingfound then
+  uris.each do |url| url.start_with?("http")
+    system("open " + url)
+  end
+end
+
+
