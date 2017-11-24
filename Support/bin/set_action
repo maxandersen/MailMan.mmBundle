@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 ACTION=`defaults read com.freron.MailMate MmMailManCommandAction 2>/dev/null`
 
