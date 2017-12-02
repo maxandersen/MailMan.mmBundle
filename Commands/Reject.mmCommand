@@ -1,7 +1,7 @@
 {
 	name          = 'Reject';
 	uuid          = 'BF23BD82-6EE9-4298-9B52-03A6B9CE6E80';
-	select	     = 'list-id exists';
+	conditions    = 'list-id exists';
 	environment   = 'MM_TO=${to}\n';
 	output        = 'actions';
 	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/reject"\n';
