@@ -1,7 +1,8 @@
 {
-	isDisabled    = 0;
 	name          = 'Show Archive';
 	uuid          = '7B421EEB-5146-4776-AE05-53D2ED581AE1';
+	conditions    = 'list-subscribe exists';
 	environment   = 'MM_LIST_INFO=${List-Archive}\n';
 	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/showinfo"\n';
+	keyEquivalent = '^m';
 }

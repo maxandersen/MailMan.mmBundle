@@ -1,6 +1,10 @@
-#/bin/bash
+#!/bin/bash
 
 PASSWORD=`security find-generic-password -s "${MM_IDENTIFIER}" -w 2>/dev/null`
+ACTION=`defaults read com.freron.MailMate MmMailManCommandAction 2>/dev/null`
+if [ -z "${ACTION}" ]; then
+	ACTION="openMessage"
+fi
 
 # If no password then ask for one
 if [ -z "${PASSWORD}" ]; then
@@ -23,7 +27,7 @@ cat << END
 			};
 			resultActions = (
 				{
-					type = "openMessage";
+					type = "${ACTION}";
 				}
 			);
 		},

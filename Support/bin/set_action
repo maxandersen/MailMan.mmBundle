@@ -1,0 +1,26 @@
+#!/bin/bash
+
+ACTION=`defaults read com.freron.MailMate MmMailManCommandAction 2>/dev/null`
+
+osascript <<END
+tell application "System Events"
+	activate
+	set theDefault to "open composer"
+	if "${ACTION}" is equal to "sendMessage"
+		set theDefault to "send immediately"
+	end
+	
+	set result to choose from list {"open composer", "send immediately"} with title "Approve/Reject Emails" with prompt "After creating reply then" default items { theDefault }
+
+	if result is not false then
+		set theAction to item 1 of result
+		if theAction is "open composer" then
+			set theAction to "openMessage"
+		else
+			set theAction to "sendMessage"
+		end
+
+		do shell script "defaults write com.freron.MailMate MmMailManCommandAction -string '" & theAction & "'"
+	end if
+end tell
+END
